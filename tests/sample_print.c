@@ -51,6 +51,11 @@ int _printf(const char *format, ...)
                     case 's':
                         print_string(va_arg(ap, char *));
                         break;
+
+                    case '%':
+                        blip = '%';
+                        write(1, &blip, 1);
+                        break;
                 }
                 x++;
             }

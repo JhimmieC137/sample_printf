@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
+
+/**
+ * print_pointer - Prints pointer address characters
+ * 
+ * @n: Pointer
+ * Return: Void
+ */
+
+void print_string(char *n)
+{
+    int c = 0;
+
+    if (n)
+    {
+        while (*(n + c))
+        {
+            write(1, &n + c, 1);
+            c++;
+        }
+    }
+}
